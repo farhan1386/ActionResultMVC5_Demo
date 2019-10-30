@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ActionResultInMvc_Demo.Models.Product>
+
+@{
+
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.ProductName)</th>
+            <th>@Html.DisplayNameFor(m => m.SupplierId)</th>
+            <th>@Html.DisplayNameFor(m => m.UnitPrice)</th>
+            <th>@Html.DisplayNameFor(m => m.Package)</th>
+            <th>@Html.DisplayNameFor(m => m.IsDiscontinued)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.SupplierId</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.Package</td>
+                <td>@item.IsDiscontinued</td>
+            </tr>
+        }
+    </tbody>
+</table>

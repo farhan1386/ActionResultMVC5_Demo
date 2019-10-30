@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ActionResultInMvc_Demo.Models.Product>
+
+@{
+    ViewBag.Title = "MyView";
+}
+
+<h2>List of Products</h2>
+
+@Html.Partial("_Products",Model)
+
+<button>Click me</button>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.getScript("/Home/MyScript");
+        });
+    });
+</script>

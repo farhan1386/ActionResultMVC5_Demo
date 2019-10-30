@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ActionResultInMvc_Demo.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>list of Costomers</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.FirstName)</th>
+            <th>@Html.DisplayNameFor(m => m.LastName)</th>
+            <th>@Html.DisplayNameFor(m => m.City)</th>
+            <th>@Html.DisplayNameFor(m => m.Country)</th>
+            <th>@Html.DisplayNameFor(m => m.Phone)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.City</td>
+                <td>@item.Country</td>
+                <td>@item.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table>
