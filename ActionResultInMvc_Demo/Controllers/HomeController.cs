@@ -13,14 +13,13 @@ namespace ActionResultInMvc_Demo.Controllers
 
         public ActionResult Index()
         {
-            var customer = db.Customers.ToList();
-            return View(customer);
+            var products = db.Products.ToList();
+            return View(products);
         }
 
         public ViewResult MyView()
         {
-            var products = db.Products.ToList();
-            return View(products);
+            return View();
         }
 
         public ContentResult Content()
@@ -47,7 +46,8 @@ namespace ActionResultInMvc_Demo.Controllers
 
         public PartialViewResult Products()
         {
-            return PartialView("_Products");
+            var products = db.Products.ToList();
+            return PartialView("_Products",products);
         }
 
         public FileResult MyFile()
