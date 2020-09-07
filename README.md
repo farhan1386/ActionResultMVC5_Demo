@@ -64,7 +64,7 @@ Content-returning: These ActionResults are responsible for returning content to 
 2.	HttpUnauthorizedResult
 3.	HttpNotFoundResult
 
-##What is the difference between ActionResult and ViewResult? 
+## What is the difference between ActionResult and ViewResult? 
 |ActionResult|ViewResult|
 |---|---|	
 |ActionResult is an abstract class|ViewResult derives from the ActionResult class|
